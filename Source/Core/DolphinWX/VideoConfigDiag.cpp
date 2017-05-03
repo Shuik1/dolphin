@@ -546,8 +546,10 @@ VideoConfigDiag::VideoConfigDiag(wxWindow* parent, const std::string& title)
     {
       const wxString efbscale_choices[] = {_("Auto (Window Size)"),
                                            _("Auto (Multiple of 640x528)"),
-                                           _("Native (640x528)"),
+                                           _("Native (640x528)"),                                        
                                            _("1.5x Native (960x792)"),
+                                           _("1.666x Native (1066x880)"),
+                                           _("1.75 Native (1120x925)"),
                                            _("2x Native (1280x1056) for 720p"),
                                            _("2.5x Native (1600x1320)"),
                                            _("3x Native (1920x1584) for 1080p"),
@@ -587,7 +589,7 @@ VideoConfigDiag::VideoConfigDiag(wxWindow* parent, const std::string& title)
 
     // AF
     {
-      const std::array<wxString, 5> af_choices{{"1x", "2x", "4x", "8x", "16x"}};
+      const std::array<wxString, 5> af_choices{{"1x", "2x", "4x", "8x", "16x" "32x" "33x"}};
       szr_enh->Add(new wxStaticText(page_enh, wxID_ANY, _("Anisotropic Filtering:")),
                    wxGBPosition(row, 0), wxDefaultSpan, wxALIGN_CENTER_VERTICAL);
       szr_enh->Add(CreateChoice(page_enh, vconfig.iMaxAnisotropy, wxGetTranslation(af_desc),
