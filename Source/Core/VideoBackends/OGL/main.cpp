@@ -9,7 +9,7 @@
 
 Internal and fullscreen resolution: Since the only internal resolutions allowed
 are also fullscreen resolution allowed by the system there is only need for one
-resolution setting that applies to both the internal resolution and the
+setting that applies to both the internal resolution and the
 fullscreen resolution.  - Apparently no, someone else doesn't agree
 
 Todo: Make the internal resolution option apply instantly, currently only the
@@ -108,7 +108,7 @@ void VideoBackend::InitBackendInfo()
   g_Config.backend_info.Adapters.clear();
 
   // aamodes - 1 is to stay consistent with D3D (means no AA)
-  g_Config.backend_info.AAModes = {1, 2, 4, 8};
+  g_Config.backend_info.AAModes = {1, 2, 2.5, 3, 4, 8, 10, 12, 15};
 }
 
 bool VideoBackend::InitializeGLExtensions()
